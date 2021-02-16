@@ -6,7 +6,7 @@ org.example.mina.server.MinaServer
 
 * 启动 demo
 
-image::file.png[]
+![](file.png)
 
 * 点击 `启动mina服务`
 * 点击发送消息
