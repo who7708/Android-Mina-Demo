@@ -12,7 +12,7 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
 import java.net.InetSocketAddress;
 
-public class MinaService {
+public class MinaServer {
 
     public static void main(String[] args) {
         IoAcceptor ioAcceptor = new NioSocketAcceptor();
