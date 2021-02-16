@@ -1,7 +1,5 @@
 package com.example.server;
 
-import android.util.Log;
-
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.apache.mina.core.service.IoAcceptor;
 import org.apache.mina.core.service.IoHandlerAdapter;
@@ -14,14 +12,7 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
 import java.net.InetSocketAddress;
 
-/**
- * @author Chris
- * @version 1.0.0
- * @date 2/16/21
- */
 public class MinaService {
-
-    private static final String TAG = "MinaService";
 
     public static void main(String[] args) {
         IoAcceptor ioAcceptor = new NioSocketAcceptor();
@@ -34,7 +25,7 @@ public class MinaService {
         try {
             ioAcceptor.bind(new InetSocketAddress(9123));
         } catch (Exception e) {
-            Log.i(TAG, "main: ", e);
+            e.printStackTrace();
         }
     }
 
@@ -63,6 +54,7 @@ public class MinaService {
             String str = message.toString();
             String date = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss.SSS").format(System.currentTimeMillis());
             session.write(date);
+            System.out.println("接收的数据：" + str);
         }
 
         @Override
