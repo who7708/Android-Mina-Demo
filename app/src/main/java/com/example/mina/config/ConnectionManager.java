@@ -34,7 +34,7 @@ public class ConnectionManager {
 
     public ConnectionManager(ConnectionConfig config) {
         this.mConfig = config;
-        this.mContext = new WeakReference<>(config.getContext);
+        this.mContext = new WeakReference<>(config.getContext());
 
         init();
     }

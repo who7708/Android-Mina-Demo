@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ConnectionConfig {
-    private Context getContext;
+    private Context context;
     private String ip;
     private int port;
     private int readBufferSize;
